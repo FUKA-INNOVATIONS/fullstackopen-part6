@@ -7,7 +7,6 @@ import Notification from './Notification'
 const AnecdoteList = () => {
   let anecdotes = useSelector(state => state.anecdotes)
   const searchTerm = useSelector(state => state.filter)
-  console.log('TERMTERM: ', searchTerm);
 
   if (searchTerm !== null) {
     anecdotes =  anecdotes.filter(a => a.content.toLowerCase().includes(searchTerm.toLowerCase()))
